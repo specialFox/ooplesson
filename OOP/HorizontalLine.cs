@@ -11,8 +11,10 @@ namespace OOP
         List<Point> pLine;
         public HorizontalLine(int xLeft,int xRight, int y,char sum) {
 
+            pLine = new List<Point>();
             for (int x = xLeft; x <= xRight; x++) {
-                pLine.Add(new Point(x, y, sum));
+                Point p = new Point(x, y, sum);
+                pLine.Add(p);
             }
         }
 
