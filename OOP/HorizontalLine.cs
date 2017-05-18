@@ -6,22 +6,14 @@ using System.Threading.Tasks;
 
 namespace OOP
 {
-    class HorizontalLine
+    class HorizontalLine:Figure
     {
-        List<Point> pLine;
         public HorizontalLine(int xLeft,int xRight, int y,char sum) {
 
-            pLine = new List<Point>();
+            pList = new List<Point>();
             for (int x = xLeft; x <= xRight; x++) {
                 Point p = new Point(x, y, sum);
-                pLine.Add(p);
-            }
-        }
-
-        public void Draw()
-        {
-            foreach (Point p in pLine) {
-                p.Draw();
+                pList.Add(p);
             }
         }
     }
