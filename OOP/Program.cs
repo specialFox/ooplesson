@@ -11,6 +11,9 @@ namespace OOP
         static void Main(string[] args)
         {
 
+            Console.SetBufferSize(120,30);
+
+
             Point p1 = new Point(1,3,'*');
             Point p2 = new Point(4, 5, '#');
             Point p3 = new Point(6, 4, '@');
@@ -18,11 +21,15 @@ namespace OOP
             Point p5 = new Point(9, 8, '%');
             Point p6 = new Point(12, 7, '^');
 
-            HorizontalLine horLine = new HorizontalLine(4,20,7,'&');
-            horLine.Draw();
+            HorizontalLine hLineUp = new HorizontalLine(0,78,0,'+');
+            HorizontalLine hLineDown = new HorizontalLine(0, 78, 24, '+');
+            VerticalLine vLineLeft = new VerticalLine(0, 24, 0, '+');
+            VerticalLine vLineRight = new VerticalLine(0, 24, 78, '+');
 
-            VerticalLine vLine = new VerticalLine(7, 23, 4, '&');
-            vLine.Draw();
+            hLineUp.Draw();
+            hLineDown.Draw();
+            vLineLeft.Draw();
+            vLineRight.Draw();
 
             Console.ReadLine();
         }
