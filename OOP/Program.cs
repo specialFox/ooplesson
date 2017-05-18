@@ -18,18 +18,11 @@ namespace OOP
             Point p5 = new Point(9, 8, '%');
             Point p6 = new Point(12, 7, '^');
 
-            List<Point> lPoint = new List<Point>();
-            lPoint.Add(p1);
-            lPoint.Add(p2);
-            lPoint.Add(p3);
-            lPoint.Add(p4);
-            lPoint.Add(p5);
-            lPoint.Add(p6);
+            HorizontalLine horLine = new HorizontalLine(4,20,7,'&');
+            horLine.Draw();
 
-            foreach (Point i in lPoint) {
-                i.Draw();
-                //Console.WriteLine(i);
-            }
+            VerticalLine vLine = new VerticalLine(7, 23, 4, '&');
+            vLine.Draw();
 
             Console.ReadLine();
         }
