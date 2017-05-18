@@ -14,12 +14,8 @@ namespace OOP
             Console.SetBufferSize(120,30);
 
 
-            Point p1 = new Point(1,3,'*');
-            Point p2 = new Point(4, 5, '#');
-            Point p3 = new Point(6, 4, '@');
-            Point p4 = new Point(8, 6, '$');
-            Point p5 = new Point(9, 8, '%');
-            Point p6 = new Point(12, 7, '^');
+            
+            
 
             HorizontalLine hLineUp = new HorizontalLine(0,78,0,'+');
             HorizontalLine hLineDown = new HorizontalLine(0, 78, 24, '+');
@@ -30,6 +26,11 @@ namespace OOP
             hLineDown.Draw();
             vLineLeft.Draw();
             vLineRight.Draw();
+
+
+            Point p1 = new Point(4, 5, '*');
+            Snake snake = new Snake(p1, 4, Direction.RIGHT);
+            snake.Draw();
 
             Console.ReadLine();
         }
