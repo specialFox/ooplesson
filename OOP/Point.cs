@@ -61,6 +61,11 @@ namespace OOP
             Console.SetCursorPosition(_x, _y);
             Console.Write(_sym);
         }
+
+        public void Clear() {
+            sym = ' ';
+            Draw();
+        }
     }
 
 }
