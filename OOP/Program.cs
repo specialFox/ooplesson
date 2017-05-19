@@ -14,10 +14,6 @@ namespace OOP
 
             Console.SetBufferSize(120,30);
 
-
-            
-            
-
             HorizontalLine hLineUp = new HorizontalLine(0,78,0,'+');
             HorizontalLine hLineDown = new HorizontalLine(0, 78, 24, '+');
             VerticalLine vLineLeft = new VerticalLine(0, 24, 0, '+');
@@ -32,32 +28,16 @@ namespace OOP
             Point p1 = new Point(4, 5, '*');
             Snake snake = new Snake(p1, 4, Direction.RIGHT);
             snake.Draw();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
+
+            while (true) {
+                if (Console.KeyAvailable) {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
+                Thread.Sleep(100);
+                snake.Move();
+
+            }
 
             Console.ReadLine();
         }
